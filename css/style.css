@@ -1,0 +1,257 @@
+/* fonts */
+
+@font-face {
+  font-family: 'Rosarivo';
+  src:  local('Rosarivo'),
+        url('../fonts/Rosarivo-Regular.woff2') format('woff2'),
+        url('../fonts/Rosarivo-Regular.woff') format('woff');
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SHORTCUT';
+  src:  local('SHORTCUT'),
+        url('../fonts/SHORTCUT.woff2') format('woff2'),
+        url('../fonts/SHORTCUT.woff') format('woff');
+        font-display: swap;
+        font-style: normal;
+        font-weight: 600;
+}
+
+/* general style */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../img/avery-cocozziello-unsplash.jpg') no-repeat top center;
+  overflow: hidden;
+}
+
+button  {
+  border: transparent;
+  background: transparent;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'SHORTCUT', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+.main {
+  position: relative;
+}
+
+.clock {
+  display: flex;
+}
+
+.clock div {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #dedbde;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+}
+
+.clock div:not(:last-child) {
+  margin-right: 20px;
+}
+
+.clock div:last-child {
+  border: none;
+} 
+
+.clock span {
+  width: 100px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Rosarivo', sans-serif;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  color: #fff;
+  background: rgba(250, 109, 253, 0.4);
+  border-radius: 10px 10px 0 0;
+}
+
+.clock .text {
+  height: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(236, 26, 121, 0.7);
+  border-radius: 0 0 10px 10px;
+}
+
+.romb {
+  transform: rotate(45deg);
+}
+
+div #ampm {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  padding-top: 12px;
+  width: 45px;
+  height: 45px;
+  font-family: 'SHORTCUT', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(32, 251, 3, 0.5);
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+}
+
+.music {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -12%;
+  width: 46px;
+  height: 46px;
+  background: url('../img/icon-music.png') no-repeat center;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+}
+
+.music::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 4px;
+  visibility: visible;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(45deg, #21be91 20%, #dbaeff 30%, #9b4ce1 30%) no-repeat;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  transform: rotate(45deg);
+  transition: visibility .1s ease-in-out;
+}
+
+.sound-active::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 4px;
+  visibility: hidden;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(45deg, #21be91 20%, #dbaeff 30%, #9b4ce1 30%) no-repeat;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  transform: rotate(45deg);
+  transition: visibility .1s ease-in-out;
+}
+
+.audio {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  right: -12%;
+  width: 40px;
+  height: 0;
+  background: transparent;
+  transform: rotate(45deg);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.sources-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 360px;
+}
+
+a {
+  padding: 5px;
+  text-decoration: none;
+  font-family: 'Shortcut', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+}
+
+.sources:first-child a {
+  color: #14a57c;
+}
+
+.sources:nth-child(2) a {
+  color: #ad56f4;
+}
+
+.sources:last-child a {
+  color: #9b4ce1;
+}
+
+@media (min-width: 320px) and (max-width: 505px) {
+    body {
+      max-width: 505px;
+    }
+
+    .clock {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(10%);
+    }
+
+    .clock div {
+      margin-bottom: 20px;
+    }
+
+    .clock #ampm {
+      top: 5px;
+    }
+
+    .music {
+      top: 96.3%;
+      right: 50%;
+    }
+
+    .sources-list {
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 25px;
+    }
+
+    .sources-list .sources a {
+      font-size: 10px;
+      color: rgba(236, 26, 121, 0.7);
+    }
+
+    .sources:not(:last-child) {
+      margin-bottom: 10px;
+    }
+}
