@@ -23,15 +23,25 @@
 /* general style */
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   background: url('../img/avery-cocozziello-unsplash.jpg') no-repeat top center;
   overflow: hidden;
@@ -64,6 +74,8 @@ ul, li {
 }
 
 .clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -71,7 +83,8 @@ ul, li {
   position: relative;
   border-radius: 10px;
   border: 1px solid #dedbde;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
 }
 
 .clock div:not(:last-child) {
@@ -85,9 +98,15 @@ ul, li {
 .clock span {
   width: 100px;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 50px;
   font-family: 'Rosarivo', sans-serif;
   text-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
@@ -105,10 +124,6 @@ ul, li {
   border-radius: 0 0 10px 10px;
 }
 
-.romb {
-  transform: rotate(45deg);
-}
-
 div #ampm {
   display: inline-block;
   position: absolute;
@@ -122,7 +137,8 @@ div #ampm {
   text-align: center;
   background: rgba(32, 251, 3, 0.5);
   border-radius: 5px;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
 }
 
 .music {
@@ -133,7 +149,8 @@ div #ampm {
   width: 46px;
   height: 46px;
   background: url('../img/icon-music.png') no-repeat center;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
   border-radius: 5px;
 }
 
@@ -145,9 +162,15 @@ div #ampm {
   visibility: visible;
   width: 40px;
   height: 2px;
+  background: -o-linear-gradient(45deg, #21be91 20%, #dbaeff 30%, #9b4ce1 30%) no-repeat;
   background: linear-gradient(45deg, #21be91 20%, #dbaeff 30%, #9b4ce1 30%) no-repeat;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
-  transform: rotate(45deg);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: visibility .1s ease-in-out;
+  -o-transition: visibility .1s ease-in-out;
   transition: visibility .1s ease-in-out;
 }
 
@@ -159,9 +182,15 @@ div #ampm {
   visibility: hidden;
   width: 40px;
   height: 2px;
+  background: -o-linear-gradient(45deg, #21be91 20%, #dbaeff 30%, #9b4ce1 30%) no-repeat;
   background: linear-gradient(45deg, #21be91 20%, #dbaeff 30%, #9b4ce1 30%) no-repeat;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
-  transform: rotate(45deg);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+          box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: visibility .1s ease-in-out;
+  -o-transition: visibility .1s ease-in-out;
   transition: visibility .1s ease-in-out;
 }
 
@@ -173,7 +202,9 @@ div #ampm {
   width: 40px;
   height: 0;
   background: transparent;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 footer {
@@ -182,7 +213,11 @@ footer {
 }
 
 .sources-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 20px;
   width: 360px;
@@ -199,6 +234,7 @@ a {
 
 a:hover {
   background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, .3);
 }
 
@@ -220,10 +256,21 @@ a:hover {
     }
 
     .clock {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
       align-items: center;
+      -ms-transform: translateX(10%);
+              transform: translateX(10%);
       transform: translateX(10%);
     }
 
@@ -241,7 +288,12 @@ a:hover {
     }
 
     .sources-list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
       align-items: flex-end;
       margin-bottom: 25px;
     }
@@ -254,4 +306,10 @@ a:hover {
     .sources:not(:last-child) {
       margin-bottom: 10px;
     }
+}
+
+@media (max-width: 400px) {
+  .sources-list {
+    display: none;
+  }
 }
