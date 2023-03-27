@@ -4,13 +4,4 @@
 
 # Untracked files #
 ###################
-*.jpg
-*.png
-*.svg
 *.md
-
-# Folders #
-###########
-fonts/
-img/
-audio/
